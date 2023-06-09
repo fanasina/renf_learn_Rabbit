@@ -25,6 +25,7 @@ to launch with args:
 ``
 ./name_exec param_learning_Rate param_discount_factor param_Explor_Factor x_size y_size number_episodes max_counter param_nb_boclk param_nb_renard param_nb_carotte param_nb_microsecond_Inter_Episode param_nb_microsecond_Inter_Test
 ``
+
 You can ommit these args , the defaults values :`` 0.85 0.99 1.0 4 4 200 190 3 3 1 1000000 50000 ``
 
 The program generate a random grid of size x_size * y_size.
@@ -42,7 +43,7 @@ V: vide (empty)
 C: Carrot
 B: Bloc
 R: renard (Fox)
-``
+```
 H: haut (up)        reward when -action- choosen in this position (state) is -up-   
 G: gauche (left)    reward when -action- choosen in this position (state) is -left-
 D: droit (right)    reward when -action- choosen in this position (state) is -right-
