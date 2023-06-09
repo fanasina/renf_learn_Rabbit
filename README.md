@@ -1,22 +1,22 @@
-# lapin_RL
-# Rabbit game in a grid using : apprentissage par renforcement: lapin(rabbit), renard, carotte, block
-# use of this -> https://eduscol.education.fr/sti/sites/eduscol.education.fr.sti/files/ressources/pedagogiques/14756/14756-introduction-lapprentissage-par-renforcement-ensps.pdf
+ lapin_RL
+ Rabbit game in a grid using : apprentissage par renforcement: lapin(rabbit), renard, carotte, block
+ use of this -> https://eduscol.education.fr/sti/sites/eduscol.education.fr.sti/files/ressources/pedagogiques/14756/14756-introduction-lapprentissage-par-renforcement-ensps.pdf
 
-tested in linux env
+# tested in linux env
 
-# executable name for example : lapin (= name_exec) 
-g++ -o lapin lapin_game.cpp
-./lapin 
+ executable name for example : lapin (= name_exec) 
+# g++ -o lapin lapin_game.cpp
+# ./lapin 
 
-# if you want double precision floating point of the rewards you can use:
-g++ -o lapin_d lapin_game_double.cpp
-./lapin_d
+If you want double precision floating point of the rewards you can use:
+# g++ -o lapin_d lapin_game_double.cpp
+# ./lapin_d
 
-# USAGE
-# to exit the program
-Ctrl + c 
-# to launch with args: 
-./name_exec param_learning_Rate param_discount_factor param_Explor_Factor x_size y_size number_episodes max_counter param_nb_boclk param_nb_renard param_nb_carotte param_nb_microsecond_Inter_Episode param_nb_microsecond_Inter_Test
+USAGE
+to exit the program
+# Ctrl + c 
+to launch with args: 
+# ./name_exec param_learning_Rate param_discount_factor param_Explor_Factor x_size y_size number_episodes max_counter param_nb_boclk param_nb_renard param_nb_carotte param_nb_microsecond_Inter_Episode param_nb_microsecond_Inter_Test
 
 you can ommit these args , the defaults values : 0.85 0.99 1.0 4 4 200 190 3 3 1 1000000 50000
 
@@ -24,21 +24,21 @@ The program generate a random grid of size x_size * y_size.
 each cell can contain one of these elements: empty (V), start (S), carrot (S), fox (R), block (B), (and the rabbit that moves in the grid).
 For contents: R (fox), B (block), C (carrot) we can give a maximal number of content : param_nb_contents; the program chose a radom number between 1 and param_n_contents and give a random position of each contents.
 
-goal: find  (good and optimized) path between start (S) and carrot (C) and avoid : fox (R), block (B) in the grid.
+# goal: find  (good and optimized) path between start (S) and carrot (C) and avoid : fox (R), block (B) in the grid.
 
-# caption
-s: state ,(x,y): position, contents
-# contents:
-S: Start
-V: vide (empty)
-C: Carrot
-B: Bloc
-R: renard (Fox)
+caption
+# s: state ,(x,y): position, contents
+contents:
+# S: Start
+# V: vide (empty)
+# C: Carrot
+# B: Bloc
+# R: renard (Fox)
 
-H: haut (up)        reward when -action- choosen in this position is -up-      
-G: gauche (left)    reward when -action- choosen in this position is -left-
-D: droit (right)    reward when -action- choosen in this position is -right-
-B: bas (down)       reward when -action- choosen in this position is -down-
+# H: haut (up)        reward when -action- choosen in this position is -up-      
+# G: gauche (left)    reward when -action- choosen in this position is -left-
+# D: droit (right)    reward when -action- choosen in this position is -right-
+# B: bas (down)       reward when -action- choosen in this position is -down-
 
 
 s: 0,(0,0), V|s: 1,(1,0), V|s: 2,(2,0), V|s: 3,(3,0), V|          
