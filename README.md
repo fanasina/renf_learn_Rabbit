@@ -35,6 +35,7 @@ For contents: R (fox), B (block), C (carrot) we can give a maximal number of con
 Goal: find  (good and optimized) path between start (S) and carrot (C) and avoid : fox (R), block (B) in the grid.
 
 # Caption
+```
 s: state ,(x,y): position, contents
 
 Contents:
@@ -43,7 +44,7 @@ V: vide (empty)
 C: Carrot
 B: Bloc
 R: renard (Fox)
-```
+
 H: haut (up)        reward when -action- choosen in this position (state) is -up-   
 G: gauche (left)    reward when -action- choosen in this position (state) is -left-
 D: droit (right)    reward when -action- choosen in this position (state) is -right-
@@ -79,4 +80,4 @@ s:12,(0,3), B|s:13,(1,3), R|s:14,(2,3), V|s:15,(3,3), V|
  D:   0.0000 | D:   0.0000 | D:   0.0000 | D:   0.0000 |          
  B:   0.0000 | B:   0.0000 | B:  -0.8500 | B:   0.0000 |          
 -------------------------------------------------------- 
-``
+```
