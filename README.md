@@ -30,7 +30,7 @@ You can ommit these args , the defaults values :`` 0.85 0.99 1.0 4 4 200 190 3 3
 
 The program generate a random grid of size ``x_size * y_size``.
 Each cell can contain one of these elements: ``empty (V), start (S), carrot (S), fox (R), block (B), (and the rabbit that moves in the grid)``.
-For contents: ``R (fox), B (block), C (carrot)`` you can give a maximal number of contents : param_nb_contents; the program chose a radom number between 1 and param_n_contents and give a random position of each contents.
+For contents: ``R (fox), B (block), C (carrot)`` you can give a maximal number of contents in the game : param_nb_contents; the program chose a radom number between 1 and param_n_contents and give a random position of each contents.
 
 ### Goal: 
 Find  (good and optimized) path between start (S) and carrot (C) and avoid : fox (R), block (B) in the grid.
@@ -38,20 +38,23 @@ Find  (good and optimized) path between start (S) and carrot (C) and avoid : fox
 ### Caption
 ```
 s: state ,(x,y): position, contents
-
-Contents:
+```
+### Contents:
+```
 S: Start
 V: vide (empty)
 C: Carrot
 B: Bloc
 R: renard (Fox)
-
+```
+### Q-learning value (rewards)
+```
 H: haut (up)        reward when -action- choosen in this position (state) is -up-   
 G: gauche (left)    reward when -action- choosen in this position (state) is -left-
 D: droit (right)    reward when -action- choosen in this position (state) is -right-
 B: bas (down)       reward when -action- choosen in this position (state) is -down-
 ```
-
+### screenshot
 ```
 s: 0,(0,0), V|s: 1,(1,0), V|s: 2,(2,0), V|s: 3,(3,0), V|          
 --------------------------------------------------------          
