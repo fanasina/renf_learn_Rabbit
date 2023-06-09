@@ -2,23 +2,28 @@
  Rabbit game in a grid using : apprentissage par renforcement: lapin(rabbit), renard, carotte, block
  use of this -> https://eduscol.education.fr/sti/sites/eduscol.education.fr.sti/files/ressources/pedagogiques/14756/14756-introduction-lapprentissage-par-renforcement-ensps.pdf
 
-# tested in linux env
+tested in linux env
 
  executable name for example : lapin (= name_exec) 
-# g++ -o lapin lapin_game.cpp
-# ./lapin 
-
+``
+g++ -o lapin lapin_game.cpp
+./lapin 
+``
 If you want double precision floating point of the rewards you can use:
-# g++ -o lapin_d lapin_game_double.cpp
-# ./lapin_d
-
+``
+g++ -o lapin_d lapin_game_double.cpp
+./lapin_d
+``
 USAGE
+
 to exit the program
-# Ctrl + c 
+``
+Ctrl + c 
+``
 to launch with args: 
-
+``
 ./name_exec param_learning_Rate param_discount_factor param_Explor_Factor x_size y_size number_episodes max_counter param_nb_boclk param_nb_renard param_nb_carotte param_nb_microsecond_Inter_Episode param_nb_microsecond_Inter_Test
-
+``
 You can ommit these args , the defaults values : 0.85 0.99 1.0 4 4 200 190 3 3 1 1000000 50000
 
 The program generate a random grid of size x_size * y_size.
@@ -35,13 +40,13 @@ Contents:
 # C: Carrot
 # B: Bloc
 # R: renard (Fox)
-
+``
 H: haut (up)        reward when -action- choosen in this position (state) is -up-      
 G: gauche (left)    reward when -action- choosen in this position (state) is -left-
 D: droit (right)    reward when -action- choosen in this position (state) is -right-
 B: bas (down)       reward when -action- choosen in this position (state) is -down-
-
-
+``
+``
 s: 0,(0,0), V|s: 1,(1,0), V|s: 2,(2,0), V|s: 3,(3,0), V|          
 --------------------------------------------------------          
  H:   0.0000 | H:   0.0000 | H:   0.0000 | H:   0.0000 |          
@@ -70,3 +75,4 @@ s:12,(0,3), B|s:13,(1,3), R|s:14,(2,3), V|s:15,(3,3), V|
  D:   0.0000 | D:   0.0000 | D:   0.0000 | D:   0.0000 |          
  B:   0.0000 | B:   0.0000 | B:  -0.8500 | B:   0.0000 |          
 -------------------------------------------------------- 
+``
