@@ -1,4 +1,4 @@
- ##lapin_RL
+ ## lapin_RL
  Rabbit game in a grid using : ``renforcement learning``. Game grid: lapin(rabbit), renard, carotte, block
  ### use of this document: 
  [Introduction à l’apprentissage par renforcement](https://eduscol.education.fr/sti/sites/eduscol.education.fr.sti/files/ressources/pedagogiques/14756/14756-introduction-lapprentissage-par-renforcement-ensps.pdf)
@@ -27,11 +27,11 @@ Ctrl + c
 ./name_exec param_learning_Rate param_discount_factor param_Explor_Factor x_size y_size number_episodes max_counter param_nb_boclk param_nb_renard param_nb_carotte param_nb_microsecond_Inter_Episode param_nb_microsecond_Inter_Test
 ``
 
-You can ommit these args , the defaults values :`` 0.85 0.99 1.0 4 4 200 190 3 3 1 1000000 50000 ``
+You can ommit these args , the defaults values are:`` 0.85 0.99 1.0 4 4 200 190 3 3 1 1000000 50000 ``
 
-The program generate a random grid of size ``x_size * y_size``.
+The program generates a random grid of size ``x_size * y_size``.
 Each cell can contain one of these elements: ``empty (V), start (S), carrot (S), fox (R), block (B), (and the rabbit that moves in the grid)``.
-For contents: ``R (fox), B (block), C (carrot)`` you can give a maximal number of contents in the game : param_nb_contents; the program chose a radom number between 1 and param_n_contents and give a random position of each contents.
+For contents: ``R (fox), B (block), C (carrot)`` you can give a maximal number of contents in the game : param_nb_contents; the program chooses a radom number between 1 and param_n_contents and gives a random position of each contents.
 
 ### Goal: 
 Find  (good and optimized) path between start (S) and carrot (C) and avoid : fox (R), block (B) in the grid.
