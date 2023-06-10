@@ -1,10 +1,11 @@
- lapin_RL
- Rabbit game in a grid using : apprentissage par renforcement: lapin(rabbit), renard, carotte, block
- use of this -> https://eduscol.education.fr/sti/sites/eduscol.education.fr.sti/files/ressources/pedagogiques/14756/14756-introduction-lapprentissage-par-renforcement-ensps.pdf
+ ##lapin_RL
+ Rabbit game in a grid using : ``renforcement learning``. Game grid: lapin(rabbit), renard, carotte, block
+ ### use of this document: 
+ [Introduction à l’apprentissage par renforcement](https://eduscol.education.fr/sti/sites/eduscol.education.fr.sti/files/ressources/pedagogiques/14756/14756-introduction-lapprentissage-par-renforcement-ensps.pdf)
 
 ### linux env
 
- executable name for example : lapin (= name_exec) 
+executable name for example : lapin ( = name_exec ) 
 ```
 g++ -o lapin lapin_game.cpp
 ./lapin 
