@@ -1,6 +1,6 @@
  ## lapin_RL
- Rabbit game in a grid using : ``renforcement learning``. Game grid: lapin(rabbit), renard, carotte, block
- ### use of this document: 
+ Rabbit game in a grid using : ``renforcement learning``. Game grid: lapin(rabbit), renard(fox) , carrot, block
+ ### use of this pdf document: 
  [Introduction à l’apprentissage par renforcement](https://eduscol.education.fr/sti/sites/eduscol.education.fr.sti/files/ressources/pedagogiques/14756/14756-introduction-lapprentissage-par-renforcement-ensps.pdf)
 
 ### linux env
@@ -24,7 +24,7 @@ Ctrl + c
 ### to launch with args: 
 
 ``
-./name_exec param_learning_Rate param_discount_factor param_Explor_Factor x_size y_size number_episodes max_counter param_nb_boclk param_nb_renard param_nb_carotte param_nb_microsecond_Inter_Episode param_nb_microsecond_Inter_Test
+./name_exec param_learning_Rate param_discount_factor param_Explor_Factor x_size y_size number_episodes max_counter param_nb_boclk param_nb_renard param_nb_carotte param_nb_microsecond_between_Episode param_nb_microsecond_between_Test
 ``
 
 You can ommit these args , the defaults values are:`` 0.85 0.99 1.0 4 4 200 190 3 3 1 1000000 50000 ``
